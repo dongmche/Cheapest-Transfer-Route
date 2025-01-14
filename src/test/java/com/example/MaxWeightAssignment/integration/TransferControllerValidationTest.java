@@ -24,7 +24,8 @@ public class TransferControllerValidationTest {
     private TestRestTemplate restTemplate;
 
     private static String transfersCalCulateEndpoint = "/api/transfers/calculate";
-    private static String hostname = "http://localhost:";
+    private String hostname = System.getProperty("hostname", "http://localhost:");
+
 
 
     @Test
