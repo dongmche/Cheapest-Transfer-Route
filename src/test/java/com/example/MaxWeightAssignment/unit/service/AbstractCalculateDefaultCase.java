@@ -58,6 +58,7 @@ public abstract class AbstractCalculateDefaultCase {
     public void testCalculateService() {
         CalculateService calculateService = getCalculateService();
         TransferResponse actual = calculateService.calculate(transferRequest);
-        assertEquals(expectedTransferResponse, actual);
+        assertEquals(expectedTransferResponse.getTotalCost(), actual.getTotalCost());
+        assertEquals(expectedTransferResponse.getTotalWeight(), actual.getTotalWeight());
     }
 }

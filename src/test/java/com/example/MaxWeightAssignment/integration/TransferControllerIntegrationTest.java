@@ -163,8 +163,10 @@ public class TransferControllerIntegrationTest {
         TransferResponse responseBody = actualResponse.getBody();
         assertThat(responseBody.getTotalCost()).isEqualTo(expectedResponse.getTotalCost());
         assertThat(responseBody.getTotalWeight()).isEqualTo(expectedResponse.getTotalWeight());
-        assertThat(responseBody.getSelectedTransfers()).isEqualTo(expectedResponse.getSelectedTransfers());
+//        assertThat(responseBody.getSelectedTransfers()).isEqualTo(expectedResponse.getSelectedTransfers());
 
+        assertThat(responseBody.getSelectedTransfers())
+                .containsExactlyInAnyOrderElementsOf(expectedResponse.getSelectedTransfers());
     }
 }
 

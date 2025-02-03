@@ -30,7 +30,7 @@ Use the following cURL command to send a POST request to the API:
 curl -X POST http://localhost:8080/api/transfers/calculate \
 -H "Content-Type: application/json" \
 -d '{
-  "transfers": [
+  "availableTransfers": [
     { "weight": 5, "cost": 10 },
     { "weight": 10, "cost": 20 },
     { "weight": 20, "cost": 50 }
